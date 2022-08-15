@@ -97,11 +97,24 @@ void Application::Unload()
 void Application::Render()
 {
     ZoneScopedC(tracy::Color::Red2);
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+    RenderScene();
+    ImGui_ImplOpenGL3_NewFrame();
+    ImGui_ImplGlfw_NewFrame();
+    ImGui::NewFrame();
+    {
+        RenderUI();
+        ImGui::Render();
+        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+        ImGui::EndFrame();
+    }
 
-    RenderUI();
     glfwSwapBuffers(_windowHandle);
+}
+
+void Application::RenderScene()
+{
+
 }
 
 void Application::RenderUI()
