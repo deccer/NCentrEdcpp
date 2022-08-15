@@ -1,0 +1,12 @@
+{
+    "tasks": [
+        {
+            "label": "CMake Build",
+            "command": "${command:cmake.build}",
+            "type": "shell",
+            "group": "build",
+            "problemMatcher": []
+        }
+    ],
+    "version": "2.0.0"
+}
