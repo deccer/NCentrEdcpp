@@ -52,7 +52,7 @@ FetchContent_GetProperties(imgui)
 if(NOT imgui_POPULATED)
     message("Fetching imgui")
     FetchContent_Populate(imgui)
-    >
+
     add_library(imgui
         ${imgui_SOURCE_DIR}/imgui.cpp
         ${imgui_SOURCE_DIR}/imgui_demo.cpp
