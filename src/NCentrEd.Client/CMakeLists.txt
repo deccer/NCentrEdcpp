@@ -8,6 +8,7 @@ set(sourceFiles
     src/Main.cpp
 )
 set(headerFiles
+        include/NCentrEd.Client/ClientApplication.hpp
 )
 add_executable(NCentrEd.Client ${sourceFiles} ${headerFiles})
 
